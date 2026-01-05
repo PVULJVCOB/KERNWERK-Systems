@@ -39,19 +39,19 @@
 .hero-section {
 	position: relative;
 	margin-top: 16px;
-	padding-top: clamp(10px, 1.6vw, 20px);
-	padding-bottom: clamp(6px, 1.6vw, 18px);
+	padding-top: clamp(12px, 2vw, 24px);
+	padding-bottom: clamp(12px, 2.4vw, 26px);
 	min-height: auto;
 	align-content: start;
 	justify-items: start;
-	row-gap: 4px;
+	row-gap: 6px;
 
 }
 
 @media (max-width: 599px){
 	.hero-section {
-		margin-top: 10px;
-		padding-top: 6px;
+		margin-top: 4px;
+		padding-top: 4px;
 		padding-bottom: 8px;
 		padding-left: 16px;
 		padding-right: 16px;
@@ -66,7 +66,19 @@
 	}
 
 	.hero__subtitle {
-		margin-top: 6px;
+		margin-top: 4px;
+	}
+}
+
+/* Smartphones / iPhones: leichte Randentspannung */
+@media (max-width: 390px){
+	.nav {
+		padding: 10px 14px;
+	}
+
+	.hero-section {
+		padding-left: 14px;
+		padding-right: 14px;
 	}
 }
 
@@ -977,15 +989,7 @@ button.tag {
 .statistics-section {
 	row-gap: 4px;
 	position: relative;
-	margin-top: 12px;
-
-	@media (min-width: 760px) {
-		margin-top: 20px;
-	}
-
-	@media (min-width: 960px) {
-		margin-top: 32px;
-	}
+	margin-top: 56px;
 }
 
 .statistics-section__title {
