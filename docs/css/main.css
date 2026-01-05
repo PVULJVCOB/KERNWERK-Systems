@@ -59,7 +59,7 @@
 	/* ─────────────────────────────────────────
 	   PRIMÄRE FARBPALETTE
 	   ───────────────────────────────────────── */
-	--accentColor: #1A1A1A;              /* Primärer Akzent (Anthrazit) */
+	--accentColor: #f4da1b;              /* Primärer Akzent (Gelb) */
 	--fontColorStatic: #1e1e1e;          /* Unveränderliche Textfarbe */
 	--fontColor: #1e1e1e;                /* Standard Textfarbe */
 	--fontInvertColor: #eaeaea;          /* Invertierte Textfarbe (auf Dunkel) */
@@ -72,7 +72,7 @@
 	--inactiveColor: #2e2e2e;            /* Deaktivierte Elemente */
 	--backgroundColor: #eaeaea;          /* Haupt-Hintergrundfarbe */
 	--middleColor: #eaeaea;              /* Zwischen-Ebene Farbe */
-	--highlightColor: #1A1A1A;           /* Hover & Active States */
+	--highlightColor: #f4da1b;           /* Hover & Active States */
 	
 	/* ─────────────────────────────────────────
 	   LAYOUT KONSTANTEN
@@ -266,9 +266,9 @@ img {
 
 @media (pointer: fine) {
 	.buttonMd:hover {
-		background-color: var(--highlightColor, #1A1A1A);
-		color: var(--backgroundColor);
-		border-color: var(--highlightColor, #1A1A1A);
+		background-color: var(--highlightColor, #f4da1b);
+		color: var(--fontColor);
+		border-color: var(--highlightColor, #f4da1b);
 	}
 }
 

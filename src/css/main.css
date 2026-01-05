@@ -59,7 +59,7 @@
 	/* ─────────────────────────────────────────
 	   PRIMÄRE FARBPALETTE
 	   ───────────────────────────────────────── */
-	--accentColor: #f4da1b;              /* Primärer Akzent (Gelb) */
+	--accentColor: #FFD700;              /* Primärer Akzent (Gelb) */
 	--fontColorStatic: #1e1e1e;          /* Unveränderliche Textfarbe */
 	--fontColor: #1e1e1e;                /* Standard Textfarbe */
 	--fontInvertColor: #eaeaea;          /* Invertierte Textfarbe (auf Dunkel) */
@@ -72,7 +72,7 @@
 	--inactiveColor: #2e2e2e;            /* Deaktivierte Elemente */
 	--backgroundColor: #eaeaea;          /* Haupt-Hintergrundfarbe */
 	--middleColor: #eaeaea;              /* Zwischen-Ebene Farbe */
-	--highlightColor: #f4da1b;           /* Hover & Active States */
+	--highlightColor: #FFD700;           /* Hover & Active States */
 	
 	/* ─────────────────────────────────────────
 	   LAYOUT KONSTANTEN
@@ -219,7 +219,7 @@ img {
 	text-align: center;
 	padding: 6px 12px 8px;
 	background: transparent;
-	border-radius: 99px;                        /* Pill-Shape */
+	border-radius: 2px;
 	border: 1px solid var(--buttonColor, --fontColor);
 	cursor: pointer;
 	letter-spacing: -0.42px;
@@ -249,7 +249,7 @@ img {
 	text-align: center;
 	padding: 10px 12px 12px;
 	background: transparent;
-	border-radius: 99px;
+	border-radius: 2px;
 	border: 1px solid var(--buttonColor, --fontColor);
 	cursor: pointer;
 	letter-spacing: -0.42px;
@@ -266,8 +266,9 @@ img {
 
 @media (pointer: fine) {
 	.buttonMd:hover {
-		background-color: var(--buttonColor, --fontColor);
-		color: var(--backgroundColor);
+		background-color: var(--highlightColor, #f4da1b);
+		color: var(--fontColor);
+		border-color: var(--highlightColor, #f4da1b);
 	}
 }
 

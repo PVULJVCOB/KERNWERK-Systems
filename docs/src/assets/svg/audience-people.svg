@@ -1,0 +1,16 @@
+<svg width="800px" height="800px" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 3 Personen -->
+    <!-- Mitte Person -->
+    <circle cx="60" cy="35" r="12"/>
+    <path d="M40 85c2-15 12-22 20-22s18 7 20 22"/>
+    
+    <!-- Links Person -->
+    <circle cx="30" cy="45" r="10"/>
+    <path d="M15 90c2-12 8-18 15-18"/>
+    
+    <!-- Rechts Person -->
+    <circle cx="90" cy="45" r="10"/>
+    <path d="M105 90c-2-12-8-18-15-18"/>
+  </g>
+</svg>
