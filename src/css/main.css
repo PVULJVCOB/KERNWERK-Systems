@@ -161,10 +161,8 @@ body::before {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: calc(64px + env(safe-area-inset-top, 0px));
-	pointer-events: none;
-	background: none;
-	z-index: 1;
+	height: 0;
+	display: none;
 }
 
 /* ─────────────────────────────────────────

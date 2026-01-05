@@ -45,15 +45,25 @@
 		margin-top: 36px;
 		padding-top: 24px;
 		padding-bottom: 56px;
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 
 	.text-hero {
-		font-size: clamp(56px, 18vw, 82px);
-		line-height: 90%;
+		font-size: clamp(48px, 16vw, 70px);
+		line-height: 88%;
+		letter-spacing: -0.06em;
 	}
 
 	.hero__subtitle {
 		padding-top: 28px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 959px){
+	.hero-section {
+		padding-left: 18px;
+		padding-right: 18px;
 	}
 }
 
@@ -804,9 +814,12 @@ button.tag {
 	}
 
 	.nav__right {
-		padding: 4px 8px;
+		padding: 0;
+		background: transparent;
 	}
 
+	.nav__branding,
+	.nav__branding-sub,
 	.nav__logo {
 		display: none;
 	}
@@ -1091,18 +1104,20 @@ button.tag {
 	border-bottom: none;
 }
 
+
 .objective__link {
-	padding: 12px 0;
-	display: grid;
+	padding: 10px 14px;
+	display: flex;
 	grid-column: 1/-2;
-	grid-template-columns: subgrid;
 	align-items: center;
 	color: #161616;
+	width: 50%;
+	border-radius: 6px;
+	white-space: nowrap;
 
 	@media (pointer: fine) {
 		&:hover {
 			background-color: var(--highlightColor);
-			grid-column: 1/-6;
 		}
 
 		&:hover * {
