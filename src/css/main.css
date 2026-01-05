@@ -143,6 +143,7 @@ html {
 	-webkit-font-smoothing: antialiased;        /* Schriftglättung macOS */
 	-moz-osx-font-smoothing: grayscale;        /* Schriftglättung Firefox */
 	margin: 0;
+	background-color: var(--backgroundColor);
 }
 
 body {
@@ -162,7 +163,7 @@ body::before {
 	right: 0;
 	height: calc(64px + env(safe-area-inset-top, 0px));
 	pointer-events: none;
-	background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.04) 45%, rgba(0,0,0,0) 100%);
+	background: none;
 	z-index: 1;
 }
 
@@ -189,7 +190,7 @@ main {
 @media (max-width: 767px){
 	main {
 		margin-top: 0;
-		padding-top: calc(96px + env(safe-area-inset-top, 0px));
+		padding-top: calc(80px + env(safe-area-inset-top, 0px));
 	}
 }
 
