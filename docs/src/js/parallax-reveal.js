@@ -49,7 +49,10 @@
   setArtSymbol('split');
 
   // init reveal baseline
-  revealItems.forEach((el) => el.classList.add('reveal'));
+  revealItems.forEach((el) => {
+    el.classList.add('reveal');
+    if (!el.dataset.scroll) el.dataset.scroll = 'fade-up';
+  });
 
   if (prefersReducedMotion.matches) {
     revealItems.forEach((el) => el.classList.add('is-visible'));

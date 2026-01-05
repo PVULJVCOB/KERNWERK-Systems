@@ -189,6 +189,8 @@ main {
 	main {
 		margin-top: 0;
 		padding-top: calc(80px + env(safe-area-inset-top, 0px));
+		padding-left: calc(16px + env(safe-area-inset-left, 0px));
+		padding-right: calc(16px + env(safe-area-inset-right, 0px));
 	}
 }
 
@@ -306,7 +308,7 @@ img {
 .text-hero {
 	color: var(--fontColor);
 	font-size: calc(80px + ((150 - 80) * (100vw - 390px) / (960 - 390)));
-	font-weight: 300;
+	font-weight: 500;
 	line-height: 80%;
 	letter-spacing: -0.07em;                   /* Sehr enges Tracking */
 }
