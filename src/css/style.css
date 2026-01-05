@@ -977,7 +977,15 @@ button.tag {
 .statistics-section {
 	row-gap: 4px;
 	position: relative;
-	margin-top: 56px;
+	margin-top: 28px;
+
+	@media (min-width: 760px) {
+		margin-top: 36px;
+	}
+
+	@media (min-width: 960px) {
+		margin-top: 48px;
+	}
 }
 
 .statistics-section__title {
