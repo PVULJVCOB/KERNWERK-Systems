@@ -8,6 +8,21 @@
   const objectiveItems = Array.from(document.querySelectorAll('.router-section__list .objective'));
   const revealItems = [...sectionItems, ...objectiveItems];
 
+  const debugLogLayout = () => {
+    const hero = document.querySelector('.hero-section');
+    const stats = document.querySelector('.statistics-section');
+    if (!hero || !stats) return;
+    const hRect = hero.getBoundingClientRect();
+    const sRect = stats.getBoundingClientRect();
+    const gap = sRect.top - hRect.bottom;
+    // Only log on small viewports to track the reported issue
+    if (window.innerWidth <= 600) {
+      console.debug('[layout-debug] viewport', window.innerWidth, 'x', window.innerHeight,
+        'hero h:', Math.round(hRect.height), 'gap hero→stats:', Math.round(gap),
+        'stats top:', Math.round(sRect.top));
+    }
+  };
+
   // Symbol swap for the art window based on nearest objective in view
   const artLogo = document.querySelector('.art-window__logo');
   const artWindow = document.querySelector('.router-section .art-window');
@@ -53,6 +68,10 @@
     el.classList.add('reveal');
     if (!el.dataset.scroll) el.dataset.scroll = 'fade-up';
   });
+
+  // Initial layout debug and on resize for small viewports
+  debugLogLayout();
+  window.addEventListener('resize', debugLogLayout, { passive: true });
 
   if (prefersReducedMotion.matches) {
     revealItems.forEach((el) => el.classList.add('is-visible'));
