@@ -1282,35 +1282,50 @@ button.tag {
 .help-topic {
 	display: grid;
 	grid-column: span 12;
-	grid-template-columns: 1fr;
-	grid-auto-rows: auto 1fr auto auto;
-	gap: 24px;
-	height: 100%;
-	align-content: start;
+	grid-template-columns: subgrid;
+	grid-row-gap: 16px;
+	row-gap: 16px;
+	grid-template-rows: 40px 200px 140px 56px;
+	height: 492px;
+}
+
+.help-topic__header,
+.help-topic__link {
+	grid-column: 1/-1;
 }
 
 .help-topic__header {
-	grid-column: 1/-1;
-	grid-row: 1;
+	display: flex;
+	align-items: flex-end;
+	height: 40px;
 }
 
-.help-topic__body {
-	grid-column: 1/-1;
-	grid-row: 2;
+.help-topic__examples {
+	grid-column: 7/-1;
+	padding-left: 24px;
+	padding-bottom: 12px;
+	border-bottom: 1px dotted var(--dottedBorderColor);
+	color: #161616;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 140px;
+	min-height: 140px;
+}
+
+.help-topic .help-topic__body {
+	grid-column: 1/7;
+	padding-right: 24px;
 	font-size: clamp(16px, 1.8vw, 20px);
 	line-height: 120%;
 	letter-spacing: -0.01em;
 	font-weight: 300;
-	color: #161616;
-}
-
-.help-topic__examples {
-	grid-column: 1/-1;
-	grid-row: 3;
 	display: flex;
-	flex-direction: column;
-	gap: 0;
-	color: #161616;
+	align-items: flex-start;
+	height: 200px;
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .help-topic__example {
@@ -1320,17 +1335,19 @@ button.tag {
 	border-bottom: 1px dotted var(--dottedBorderColor);
 	display: flex;
 	flex-direction: row;
+	justify-items: flex-start;
 	align-items: flex-start;
 	gap: 8px;
 }
 
-.help-topic__example:last-child {
-	border-bottom: none;
+.help-topic__example span[data-typewriter] {
+	display: inline-block;
+	white-space: nowrap;
+	min-width: 18ch;
 }
 
 .help-topic__example-icon {
 	margin-top: 4px;
-	flex-shrink: 0;
 }
 
 .help-topic__example .square-icon {
@@ -1338,14 +1355,24 @@ button.tag {
 }
 
 .help-topic__link {
-	grid-column: 1/-1;
-	grid-row: 4;
-	align-self: end;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 56px;
+	min-height: 56px;
 }
 
-@media (max-width: 959px) {
-	.help-topic {
+@media (max-width: 959px){
+	.help-topic,
+	.help-topic__examples,
+	.help-topic__header,
+	.help-topic__link {
 		grid-column: 1/-1;
+	}
+
+	.help-topic__examples {
+		padding: 0;
+		border: 0;
 	}
 }
 
@@ -1370,6 +1397,7 @@ button.tag {
 	scroll-snap-type: x mandatory;
 	padding: 12px 24px 24px;
 	-webkit-overflow-scrolling: touch;
+	align-items: stretch;
 
 	@media (max-width: 599px) {
 		gap: 16px;
@@ -1392,6 +1420,11 @@ button.tag {
 	scroll-snap-stop: always;
 	min-width: calc(100% - 48px);
 	padding-bottom: 24px;
+	display: grid;
+	grid-template-rows: 40px 200px 140px 56px;
+	row-gap: 16px;
+	height: 492px;
+	box-sizing: border-box;
 }
 
 @media (min-width: 600px) {
@@ -1589,7 +1622,7 @@ button.tag {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100dvh;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1597,6 +1630,12 @@ button.tag {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+}
+
+@media (max-width: 599px) {
+	.auth-modal {
+		height: 100dvh;
+	}
 }
 
 .auth-modal.active {
@@ -1610,7 +1649,7 @@ button.tag {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100dvh;
+	height: 100%;
 	background: rgba(0, 0, 0, 0);
 	-webkit-backdrop-filter: blur(10px) saturate(1.1);
 	backdrop-filter: blur(10px) saturate(1.1);
@@ -1894,9 +1933,12 @@ button.tag {
    TYPEWRITER EFFECT - Text Animation
    ============================================ */
 
-[data-typewriter] {
-	display: inline-block;
-	white-space: nowrap;
+.typewriter-text {
+	display: inline;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 .typewriter-cursor {
