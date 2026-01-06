@@ -1545,7 +1545,7 @@ button.tag {
 }
 
 .auth-modal__overlay {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -1554,6 +1554,7 @@ button.tag {
 	-webkit-backdrop-filter: blur(10px) saturate(1.1);
 	backdrop-filter: blur(10px) saturate(1.1);
 	cursor: pointer;
+	z-index: 1000;
 }
 
 .auth-modal.active .auth-modal__overlay {
@@ -1561,7 +1562,10 @@ button.tag {
 }
 
 .auth-modal__content {
-	position: relative;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	background: rgba(255, 255, 255, 0.7);
 	border-radius: 12px;
 	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
