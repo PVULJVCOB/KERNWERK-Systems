@@ -1,0 +1,14 @@
+# GitHub Pages Configuration
+# Disable Jekyll processing for static HTML site
+exclude:
+  - README.md
+  - .git
+  - .DS_Store
+  - .venv
+
+# Keep original HTML/CSS/JS structure
+include:
+  - src
+
+# No special processing needed
+plugins: []
