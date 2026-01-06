@@ -59,7 +59,7 @@
 	/* ─────────────────────────────────────────
 	   PRIMÄRE FARBPALETTE
 	   ───────────────────────────────────────── */
-	--accentColor: #f4da1b;              /* Primärer Akzent (Gelb) */
+	--accentColor: #FFD700;              /* Primärer Akzent (Gelb) */
 	--fontColorStatic: #1e1e1e;          /* Unveränderliche Textfarbe */
 	--fontColor: #1e1e1e;                /* Standard Textfarbe */
 	--fontInvertColor: #eaeaea;          /* Invertierte Textfarbe (auf Dunkel) */
@@ -72,13 +72,21 @@
 	--inactiveColor: #2e2e2e;            /* Deaktivierte Elemente */
 	--backgroundColor: #eaeaea;          /* Haupt-Hintergrundfarbe */
 	--middleColor: #eaeaea;              /* Zwischen-Ebene Farbe */
-	--highlightColor: #f4da1b;           /* Hover & Active States */
+	--highlightColor: #FFD700;           /* Hover & Active States */
 	
 	/* ─────────────────────────────────────────
-	   LAYOUT KONSTANTEN
+	   LAYOUT KONSTANTEN & SPACING
 	   ───────────────────────────────────────── */
 	--stickyOffset: 60px;                /* Abstand für sticky Navigation */
 	--windowFrameBG: #dcdcdc;            /* Fenster-Chrome Hintergrund */
+	--spacing-xs: 4px;                   /* Extra small spacing */
+	--spacing-sm: 8px;                   /* Small spacing */
+	--spacing-md: 12px;                  /* Medium spacing */
+	--spacing-lg: 16px;                  /* Large spacing */
+	--spacing-xl: 24px;                  /* Extra large spacing */
+	--spacing-2xl: 32px;                 /* 2x large spacing */
+	--spacing-3xl: 48px;                 /* 3x large spacing */
+	--spacing-4xl: 56px;                 /* 4x large spacing */
 	
 	/* ─────────────────────────────────────────
 	   KOMPONENTEN-SPEZIFISCHE FARBEN
@@ -189,8 +197,6 @@ main {
 	main {
 		margin-top: 0;
 		padding-top: calc(80px + env(safe-area-inset-top, 0px));
-		padding-left: calc(16px + env(safe-area-inset-left, 0px));
-		padding-right: calc(16px + env(safe-area-inset-right, 0px));
 	}
 }
 

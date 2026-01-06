@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
  <head>
   <meta charset="utf-8"/>
+  <link rel="dns-prefetch" href="https://images.ctfassets.net"/>
   <title>
    KERNWERK SYSTEMS
   </title>
@@ -18,14 +19,14 @@
   <meta content="KERNWERK SYSTEMS" name="twitter:title"/>
   <meta content="Ein kognitives Entlastungssystem für handlungsfähiges Arbeiten." name="twitter:description"/>
   <meta content="https://images.ctfassets.net/fzn2n1nzq965/1IiEdIR6LsEY9aym5JQM6u/85a9a55f58137d9d1fac99319658081b/dev_social.png" name="twitter:image"/>
-  <link rel="icon" type="image/svg+xml" href="src/assets/svg/atom-logo.svg"/>
-  <link rel="icon" href="src/assets/svg/atom-logo.ico" sizes="32x32" type="image/x-icon"/>
-  <link rel="icon" href="src/assets/svg/atom-logo.ico" sizes="16x16" type="image/x-icon"/>
-  <link rel="shortcut icon" href="src/assets/svg/atom-logo.ico" type="image/x-icon"/>
-  <link rel="mask-icon" href="src/assets/svg/atom-logo.svg" color="#1f2933"/>
+  <link rel="icon" type="image/svg+xml" href="assets/svg/atom-logo.svg"/>
+  <link rel="icon" href="assets/svg/atom-logo.ico" sizes="32x32" type="image/x-icon"/>
+  <link rel="icon" href="assets/svg/atom-logo.ico" sizes="16x16" type="image/x-icon"/>
+  <link rel="shortcut icon" href="assets/svg/atom-logo.ico" type="image/x-icon"/>
+  <link rel="mask-icon" href="assets/svg/atom-logo.svg" color="#1f2933"/>
   <meta content="15" name="next-head-count"/>
-  <link href="src/css/style.css" rel="stylesheet"/>
-  <link href="src/css/main.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="css/main.css" rel="stylesheet"/>
   <noscript data-n-css="">
   </noscript>
  </head>
@@ -48,7 +49,7 @@
         <span class="nav-button__hotkey">[P]</span>
         PLANS
        </a>
-       <a class="text-smallcaps nav-button" href="https://github.com/kernwerk" target="_blank" data-hotkey="g">
+       <a class="text-smallcaps nav-button" href="https://github.com/kernwerk" target="_blank" rel="noopener noreferrer" data-hotkey="g">
         <span class="nav-button__hotkey">[G]</span>
         GITHUB
        </a>
@@ -56,18 +57,17 @@
         <span class="nav-button__hotkey">[L]</span>
         LOGIN
        </a>
-       <a class="text-smallcaps nav-button" href="/profile" target="_self" style="display: none;" data-hotkey="r">
+       <a class="text-smallcaps nav-button" href="/profile" target="_self" data-hotkey="r">
         <span class="nav-button__hotkey">[R]</span>
         PROFILE
        </a>
-       <a class="text-smallcaps nav-button" href="/logout" target="_self" style="display: none;" data-hotkey="o">
-        <span class="nav-button__hotkey">[O]</span>
+       <a class="text-smallcaps nav-button" href="/logout" target="_self" data-hotkey="o">
+        <span class="nav-button__hotkey">[L]</span>
         LOGOUT
        </a>
       </div>
       <div class="nav__right">
        <span class="nav__branding">KERNWERK <span class="nav__branding-sub">SYSTEMS</span></span>
-       <img src="src/assets/svg/atom-logo.svg" class="nav__logo" alt="Kernwerk Logo" />
       </div>
      </nav>
 
@@ -98,26 +98,7 @@
       <p class="hero__subtitle text-lg parallax-layer" data-parallax-speed="0.12">
        Ein kognitives Entlastungssystem für handlungsfähiges Arbeiten.
       </p>
-      <div class="hero__icon parallax-layer" data-parallax-speed="0.06">
-       <div class="globe-icon">
-        <canvas class="globe-icon__canvas">
-        </canvas>
-        <svg fill="none" height="42" viewbox="0 0 83 42" width="85">
-         <circle cx="63" cy="21" r="19.5" stroke="var(--globeGraphicColor)">
-         </circle>
-         <circle cx="19.5" cy="21" r="19.5" stroke="var(--globeGraphicColor)">
-         </circle>
-         <path d="M3.5 9.75 35 9.75" stroke="var(--globeGraphicColor)">
-         </path>
-         <path d="M0 21 39 21" stroke="var(--globeGraphicColor)">
-         </path>
-         <path d="M3 32 35 32.5" stroke="var(--globeGraphicColor)">
-         </path>
-         <path d="M54.096 16.056H57.948V16.788H58.68V17.532H59.424V24.336H58.68V25.08H57.948V25.836H54.096V16.056ZM57.816 24.948V24.216H58.56V17.664H57.816V16.92H54.984V24.948H57.816ZM60.336 16.056H65.664V16.92H61.224V20.496H64.92V21.372H61.224V24.948H65.664V25.836H60.336V16.056ZM68.076 22.116H67.332V19.152H66.576V16.056H67.464V19.02H68.196V21.984H68.94V24.216H69.552V21.984H70.296V19.02H71.04V16.056H71.904V19.152H71.16V22.116H70.428V24.336H69.684V25.836H68.808V24.336H68.076V22.116Z" fill="var(--globeGraphicColor)">
-         </path>
-        </svg>
-       </div>
-      </div>
+      
       <div class="hero__plus-icons hero__plus-icons--third parallax-layer" data-parallax-speed="0.28">
        <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
        <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
@@ -219,7 +200,7 @@
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Fehlende Priorität</div>
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Unrealistische Zeitannahmen</div>
          </div>
-         <a class="buttonMd help-topic__link" href="#" target="_blank">Mehr erfahren</a>
+         <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
         <div class="slideshow__slide help-topic">
          <div class="table-header help-topic__header">
@@ -235,7 +216,7 @@
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Jede Aufgabe ist startbar</div>
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Zeitlich verortet und priorisiert</div>
          </div>
-         <a class="buttonMd help-topic__link" href="#" target="_blank">Mehr erfahren</a>
+         <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
         <div class="slideshow__slide help-topic">
          <div class="table-header help-topic__header">
@@ -251,7 +232,7 @@
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Keine Schulderzeugung</div>
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Reine strukturelle Klarheit</div>
          </div>
-         <a class="buttonMd help-topic__link" href="#" target="_blank">Mehr erfahren</a>
+         <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
         <div class="slideshow__slide help-topic">
          <div class="table-header help-topic__header">
@@ -267,7 +248,7 @@
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Passt Struktur an</div>
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Eliminiert Schuldgefühle</div>
          </div>
-         <a class="buttonMd help-topic__link" href="#" target="_blank">Mehr erfahren</a>
+         <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
         <div class="slideshow__slide help-topic">
          <div class="table-header help-topic__header">
@@ -283,7 +264,7 @@
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Nachhaltige Leistung</div>
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Handlungsfähigkeit</div>
          </div>
-         <a class="buttonMd help-topic__link" href="#" target="_blank">Mehr erfahren</a>
+         <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
         <div class="slideshow__slide help-topic">
          <div class="table-header help-topic__header">
@@ -299,10 +280,7 @@
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Projektmanager</div>
           <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Teams mit vielen Anforderungen</div>
          </div>
-         <a class="buttonMd help-topic__link" href="#" target="_blank">Mehr erfahren</a>
-        </div>
-       </div>
-      <div class="slideshow__controls">
+         <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
        <button class="slideshow__arrow" id="kernwerkPrev" type="button" aria-label="Vorherige Karten"><span aria-hidden="true">&lt;</span></button>
        <div class="slideshow__dots" id="kernwerkDots"></div>
        <button class="slideshow__arrow" id="kernwerkNext" type="button" aria-label="Nächste Karten"><span aria-hidden="true">&gt;</span></button>
@@ -349,7 +327,7 @@
            <svg height="276" viewbox="0 0 326 276" width="326" xmlns="http://www.w3.org/2000/svg"><circle cx="13.5" cy="12" r="1"/><circle cx="13.5" cy="34.8182" r="1"/><circle cx="13.5" cy="57.6364" r="1"/><circle cx="13.5" cy="80.4545" r="1"/><circle cx="13.5" cy="103.273" r="1"/><circle cx="13.5" cy="126.091" r="1"/><circle cx="13.5" cy="148.909" r="1"/><circle cx="13.5" cy="171.727" r="1"/><circle cx="13.5" cy="194.545" r="1"/><circle cx="13.5" cy="217.364" r="1"/><circle cx="13.5" cy="240.182" r="1"/><circle cx="13.5" cy="263" r="1"/><circle cx="33.5" cy="12" r="1"/><circle cx="33.5" cy="34.8182" r="1"/><circle cx="33.5" cy="57.6364" r="1"/><circle cx="33.5" cy="80.4545" r="1"/><circle cx="33.5" cy="103.273" r="1"/><circle cx="33.5" cy="126.091" r="1"/><circle cx="33.5" cy="148.909" r="1"/><circle cx="33.5" cy="171.727" r="1"/><circle cx="33.5" cy="194.545" r="1"/><circle cx="33.5" cy="217.364" r="1"/><circle cx="33.5" cy="240.182" r="1"/><circle cx="33.5" cy="263" r="1"/><circle cx="53.5" cy="12" r="1"/><circle cx="53.5" cy="34.8182" r="1"/><circle cx="53.5" cy="57.6364" r="1"/><circle cx="53.5" cy="80.4545" r="1"/><circle cx="53.5" cy="103.273" r="1"/><circle cx="53.5" cy="126.091" r="1"/><circle cx="53.5" cy="148.909" r="1"/><circle cx="53.5" cy="171.727" r="1"/><circle cx="53.5" cy="194.545" r="1"/><circle cx="53.5" cy="217.364" r="1"/><circle cx="53.5" cy="240.182" r="1"/><circle cx="53.5" cy="263" r="1"/><circle cx="73.5" cy="12" r="1"/><circle cx="73.5" cy="34.8182" r="1"/><circle cx="73.5" cy="57.6364" r="1"/><circle cx="73.5" cy="80.4545" r="1"/><circle cx="73.5" cy="103.273" r="1"/><circle cx="73.5" cy="126.091" r="1"/><circle cx="73.5" cy="148.909" r="1"/><circle cx="73.5" cy="171.727" r="1"/><circle cx="73.5" cy="194.545" r="1"/><circle cx="73.5" cy="217.364" r="1"/><circle cx="73.5" cy="240.182" r="1"/><circle cx="73.5" cy="263" r="1"/><circle cx="93.5" cy="12" r="1"/><circle cx="93.5" cy="34.8182" r="1"/><circle cx="93.5" cy="57.6364" r="1"/><circle cx="93.5" cy="80.4545" r="1"/><circle cx="93.5" cy="103.273" r="1"/><circle cx="93.5" cy="126.091" r="1"/><circle cx="93.5" cy="148.909" r="1"/><circle cx="93.5" cy="171.727" r="1"/><circle cx="93.5" cy="194.545" r="1"/><circle cx="93.5" cy="217.364" r="1"/><circle cx="93.5" cy="240.182" r="1"/><circle cx="93.5" cy="263" r="1"/><circle cx="113.5" cy="12" r="1"/><circle cx="113.5" cy="34.8182" r="1"/><circle cx="113.5" cy="57.6364" r="1"/><circle cx="113.5" cy="80.4545" r="1"/><circle cx="113.5" cy="103.273" r="1"/><circle cx="113.5" cy="126.091" r="1"/><circle cx="113.5" cy="148.909" r="1"/><circle cx="113.5" cy="171.727" r="1"/><circle cx="113.5" cy="194.545" r="1"/><circle cx="113.5" cy="217.364" r="1"/><circle cx="113.5" cy="240.182" r="1"/><circle cx="113.5" cy="263" r="1"/><circle cx="133.5" cy="12" r="1"/><circle cx="133.5" cy="34.8182" r="1"/><circle cx="133.5" cy="57.6364" r="1"/><circle cx="133.5" cy="80.4545" r="1"/><circle cx="133.5" cy="103.273" r="1"/><circle cx="133.5" cy="126.091" r="1"/><circle cx="133.5" cy="148.909" r="1"/><circle cx="133.5" cy="171.727" r="1"/><circle cx="133.5" cy="194.545" r="1"/><circle cx="133.5" cy="217.364" r="1"/><circle cx="133.5" cy="240.182" r="1"/><circle cx="133.5" cy="263" r="1"/><circle cx="153.5" cy="12" r="1"/><circle cx="153.5" cy="34.8182" r="1"/><circle cx="153.5" cy="57.6364" r="1"/><circle cx="153.5" cy="80.4545" r="1"/><circle cx="153.5" cy="103.273" r="1"/><circle cx="153.5" cy="126.091" r="1"/><circle cx="153.5" cy="148.909" r="1"/><circle cx="153.5" cy="171.727" r="1"/><circle cx="153.5" cy="194.545" r="1"/><circle cx="153.5" cy="217.364" r="1"/><circle cx="153.5" cy="240.182" r="1"/><circle cx="153.5" cy="263" r="1"/><circle cx="173.5" cy="12" r="1"/><circle cx="173.5" cy="34.8182" r="1"/><circle cx="173.5" cy="57.6364" r="1"/><circle cx="173.5" cy="80.4545" r="1"/><circle cx="173.5" cy="103.273" r="1"/><circle cx="173.5" cy="126.091" r="1"/><circle cx="173.5" cy="148.909" r="1"/><circle cx="173.5" cy="171.727" r="1"/><circle cx="173.5" cy="194.545" r="1"/><circle cx="173.5" cy="217.364" r="1"/><circle cx="173.5" cy="240.182" r="1"/><circle cx="173.5" cy="263" r="1"/><circle cx="193.5" cy="12" r="1"/><circle cx="193.5" cy="34.8182" r="1"/><circle cx="193.5" cy="57.6364" r="1"/><circle cx="193.5" cy="80.4545" r="1"/><circle cx="193.5" cy="103.273" r="1"/><circle cx="193.5" cy="126.091" r="1"/><circle cx="193.5" cy="148.909" r="1"/><circle cx="193.5" cy="171.727" r="1"/><circle cx="193.5" cy="194.545" r="1"/><circle cx="193.5" cy="217.364" r="1"/><circle cx="193.5" cy="240.182" r="1"/><circle cx="193.5" cy="263" r="1"/><circle cx="213.5" cy="12" r="1"/><circle cx="213.5" cy="34.8182" r="1"/><circle cx="213.5" cy="57.6364" r="1"/><circle cx="213.5" cy="80.4545" r="1"/><circle cx="213.5" cy="103.273" r="1"/><circle cx="213.5" cy="126.091" r="1"/><circle cx="213.5" cy="148.909" r="1"/><circle cx="213.5" cy="171.727" r="1"/><circle cx="213.5" cy="194.545" r="1"/><circle cx="213.5" cy="217.364" r="1"/><circle cx="213.5" cy="240.182" r="1"/><circle cx="213.5" cy="263" r="1"/><circle cx="233.5" cy="12" r="1"/><circle cx="233.5" cy="34.8182" r="1"/><circle cx="233.5" cy="57.6364" r="1"/><circle cx="233.5" cy="80.4545" r="1"/><circle cx="233.5" cy="103.273" r="1"/><circle cx="233.5" cy="126.091" r="1"/><circle cx="233.5" cy="148.909" r="1"/><circle cx="233.5" cy="171.727" r="1"/><circle cx="233.5" cy="194.545" r="1"/><circle cx="233.5" cy="217.364" r="1"/><circle cx="233.5" cy="240.182" r="1"/><circle cx="233.5" cy="263" r="1"/><circle cx="253.5" cy="12" r="1"/><circle cx="253.5" cy="34.8182" r="1"/><circle cx="253.5" cy="57.6364" r="1"/><circle cx="253.5" cy="80.4545" r="1"/><circle cx="253.5" cy="103.273" r="1"/><circle cx="253.5" cy="126.091" r="1"/><circle cx="253.5" cy="148.909" r="1"/><circle cx="253.5" cy="171.727" r="1"/><circle cx="253.5" cy="194.545" r="1"/><circle cx="253.5" cy="217.364" r="1"/><circle cx="253.5" cy="240.182" r="1"/><circle cx="253.5" cy="263" r="1"/><circle cx="273.5" cy="12" r="1"/><circle cx="273.5" cy="34.8182" r="1"/><circle cx="273.5" cy="57.6364" r="1"/><circle cx="273.5" cy="80.4545" r="1"/><circle cx="273.5" cy="103.273" r="1"/><circle cx="273.5" cy="126.091" r="1"/><circle cx="273.5" cy="148.909" r="1"/><circle cx="273.5" cy="171.727" r="1"/><circle cx="273.5" cy="194.545" r="1"/><circle cx="273.5" cy="217.364" r="1"/><circle cx="273.5" cy="240.182" r="1"/><circle cx="273.5" cy="263" r="1"/><circle cx="293.5" cy="12" r="1"/><circle cx="293.5" cy="34.8182" r="1"/><circle cx="293.5" cy="57.6364" r="1"/><circle cx="293.5" cy="80.4545" r="1"/><circle cx="293.5" cy="103.273" r="1"/><circle cx="293.5" cy="126.091" r="1"/><circle cx="293.5" cy="148.909" r="1"/><circle cx="293.5" cy="171.727" r="1"/><circle cx="293.5" cy="194.545" r="1"/><circle cx="293.5" cy="217.364" r="1"/><circle cx="293.5" cy="240.182" r="1"/><circle cx="293.5" cy="263" r="1"/><circle cx="313.5" cy="12" r="1"/><circle cx="313.5" cy="34.8182" r="1"/><circle cx="313.5" cy="57.6364" r="1"/><circle cx="313.5" cy="80.4545" r="1"/><circle cx="313.5" cy="103.273" r="1"/><circle cx="313.5" cy="126.091" r="1"/><circle cx="313.5" cy="148.909" r="1"/><circle cx="313.5" cy="171.727" r="1"/><circle cx="313.5" cy="194.545" r="1"/><circle cx="313.5" cy="217.364" r="1"/><circle cx="313.5" cy="240.182" r="1"/><circle cx="313.5" cy="263" r="1"/></svg>
           </div>
           <div class="art-window__logo" aria-hidden="true">
-           <img src="src/assets/svg/atom-logo.svg" alt="Atom Logo" />
+           <img src="assets/svg/atom-logo.svg" alt="Atom Logo" />
           </div>
           <canvas class="art-window__canvas">
           </canvas>
@@ -377,12 +355,12 @@
         <p class="text-sm objective__body">
          Projekte werden nicht als Ziel behandelt, sondern als Material, das in kleinste, eindeutig ausführbare Einheiten zerlegt wird.
         </p>
-        <a class="buttonMd objective__main-link" href="#" target="_blank">
+        <a class="buttonMd objective__main-link" href="javascript:void(0)">
          Mehr erfahren
         </a>
         <div class="objective__link-list">
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -391,7 +369,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -400,7 +378,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -417,12 +395,12 @@
         <p class="text-sm objective__body">
          Das integrierte Assistenzsystem dient nicht der Motivation, sondern der Strukturerhaltung.
         </p>
-        <a class="buttonMd objective__main-link" href="#" target="_blank">
+        <a class="buttonMd objective__main-link" href="javascript:void(0)">
          Mehr erfahren
         </a>
         <div class="objective__link-list">
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -431,7 +409,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -440,7 +418,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -457,12 +435,12 @@
         <p class="text-sm objective__body">
          Ein Werkzeug für Menschen, deren Leistungsfähigkeit nicht an Können scheitert, sondern an Überforderung durch ungeordnete Anforderungen.
         </p>
-        <a class="buttonMd objective__main-link" href="#" target="_blank">
+        <a class="buttonMd objective__main-link" href="javascript:void(0)">
          Mehr erfahren
         </a>
         <div class="objective__link-list">
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -471,7 +449,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -480,7 +458,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -497,12 +475,12 @@
         <p class="text-sm objective__body">
          Eine robuste Architektur, die sich an wechselnde Anforderungen anpasst und dabei die Integrität der Arbeit bewahrt.
         </p>
-        <a class="buttonMd objective__main-link" href="#" target="_blank">
+        <a class="buttonMd objective__main-link" href="javascript:void(0)">
          Mehr erfahren
         </a>
         <div class="objective__link-list">
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -511,7 +489,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -520,7 +498,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -537,12 +515,12 @@
         <p class="text-sm objective__body">
          Ein intelligenter KI-Assistent, der alle Aspekte des Systems unterstützt und kontinuierlich dazulernt.
         </p>
-        <a class="buttonMd objective__main-link" href="#" target="_blank">
+        <a class="buttonMd objective__main-link" href="javascript:void(0)">
          Mehr erfahren
         </a>
         <div class="objective__link-list">
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -551,7 +529,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -560,7 +538,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -577,12 +555,12 @@
         <p class="text-sm objective__body">
          Integriertes Time Tracking und Kalender-Management für nahtlose Zeitplanung und produktive Arbeitsblöcke.
         </p>
-        <a class="buttonMd objective__main-link" href="#" target="_blank">
+        <a class="buttonMd objective__main-link" href="javascript:void(0)">
          Mehr erfahren
         </a>
         <div class="objective__link-list">
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -591,7 +569,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -600,7 +578,7 @@
           </a>
          </li>
          <li class="list-item objective__list-item">
-          <a class="objective__link" href="#">
+          <a class="objective__link" href="javascript:void(0)">
            <span class="text-smallcaps objective__label">
             <div class="square-icon">
             </div>
@@ -624,8 +602,8 @@
        </sup>
       </h2>
       <div class="plans-grid">
-       <div class="plans-grid__card" style="grid-column: 3/9;">
-        <div class="text-smallcaps tag" style="width: fit-content;">Solo</div>
+       <div class="plans-grid__card plans-grid__card--1">
+        <div class="text-smallcaps tag">Solo</div>
         <div class="plans-grid__content">
          <h3 class="plans-grid__title">Starter</h3>
          <p class="plans-grid__desc">Proof-of-Concept ohne Risiko: sofort startklar, 1 gratis Atomize und ein kompletter Testlauf inklusive.</p>
@@ -637,10 +615,10 @@
           <li class="plans-grid__feature">Export als PDF/CSV</li> 
          </ul>
         </div>
-        <a class="buttonMd plans-grid__cta" href="#" target="_blank">Jetzt kostenlos testen</a>
+        <a class="buttonMd plans-grid__cta" href="javascript:void(0)">Jetzt kostenlos testen</a>
        </div>
-       <div class="plans-grid__card" style="grid-column: 10/16;">
-        <div class="text-smallcaps tag" style="width: fit-content;">Teams</div>
+       <div class="plans-grid__card plans-grid__card--2">
+        <div class="text-smallcaps tag">Teams</div>
         <div class="plans-grid__content">
          <h3 class="plans-grid__title">Professional</h3>
          <p class="plans-grid__desc">Skaliert kollaborativ: volle Automationen, geteilte Workspaces, klare Rollen & priorisierter Support.</p>
@@ -657,10 +635,10 @@
           <li class="plans-grid__feature">Autom. Handover & Alerts bei Blockern</li>
          </ul>
         </div>
-        <a class="buttonMd plans-grid__cta" href="#" target="_blank">29€/Monat – Demo sichern</a>
+        <a class="buttonMd plans-grid__cta" href="javascript:void(0)">29€/Monat – Demo sichern</a>
        </div>
-       <div class="plans-grid__card" style="grid-column: 17/23;">
-        <div class="text-smallcaps tag" style="width: fit-content;">Enterprise</div>
+       <div class="plans-grid__card plans-grid__card--3">
+        <div class="text-smallcaps tag">Enterprise</div>
         <div class="plans-grid__content">
          <h3 class="plans-grid__title">Enterprise</h3>
          <p class="plans-grid__desc">Governance & Compliance-ready: Security-Reviews, Custom Integrationen und garantierte Verfügbarkeit.</p>
@@ -677,7 +655,7 @@
           <li class="plans-grid__feature">Private Cloud / Regionale Isolation auf Anfrage</li>
          </ul>
         </div>
-        <a class="buttonMd plans-grid__cta" href="#" target="_blank">Enterprise-Gespräch anfragen</a>
+        <a class="buttonMd plans-grid__cta" href="javascript:void(0)">Enterprise-Gespräch anfragen</a>
        </div>
       </div>
      </section>
@@ -692,13 +670,13 @@
         Social
        </div>
        <div class="footer__link-list">
-        <a class="text-smallcaps tag" href="#" target="_blank">
+        <a class="text-smallcaps tag" href="javascript:void(0)">
          Twitter
         </a>
-        <a class="text-smallcaps tag" href="#" target="_blank">
+        <a class="text-smallcaps tag" href="javascript:void(0)">
          LinkedIn
         </a>
-        <a class="text-smallcaps tag" href="#" target="_blank">
+        <a class="text-smallcaps tag" href="javascript:void(0)">
          Newsletter
         </a>
        </div>
@@ -709,23 +687,23 @@
         Resources
        </div>
        <div class="footer__link-list">
-        <a class="text-smallcaps tag" href="#" target="_blank">
+        <a class="text-smallcaps tag" href="javascript:void(0)">
          Dokumentation
         </a>
-        <a class="text-smallcaps tag" href="#" target="_blank">
+        <a class="text-smallcaps tag" href="javascript:void(0)">
          Blog
         </a>
        </div>
       </div>
       
       <div class="footer__misc-list footer__link-list">
-       <a class="text-smallcaps tag" href="#" target="_blank">
+       <a class="text-smallcaps tag" href="javascript:void(0)">
         Datenschutz
        </a>
-       <a class="text-smallcaps tag" href="#" target="_blank">
+       <a class="text-smallcaps tag" href="javascript:void(0)">
         Impressum
        </a>
-       <a class="text-smallcaps tag" href="#" target="_blank">
+       <a class="text-smallcaps tag" href="javascript:void(0)">
         Kontakt
        </a>
       </div>
@@ -734,7 +712,7 @@
 
       <div class="footer__copyright-center">
        <span class="text-smallcaps">
-        © 2025 KERNWERK SYSTEMS
+        © 2026 KERNWERK SYSTEMS
        </span>
       </div>
       
@@ -742,8 +720,8 @@
 
    </main>
   </div>
-  <script src="src/js/hotkeys.js"></script>
-  <script src="src/js/slideshow.js"></script>
-  <script src="src/js/parallax-reveal.js"></script>
+  <script src="js/hotkeys.js"></script>
+  <script src="js/slideshow.js"></script>
+  <script src="js/parallax-reveal.js"></script>
  </body>
 </html>

@@ -38,7 +38,16 @@
     const img = artSymbols[id] || artSymbols.split;
     if (currentArtId === id) return;
     currentArtId = id;
-    artLogo.innerHTML = img;
+    
+    // Safe DOM update instead of innerHTML
+    artLogo.innerHTML = '';
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = img;
+    const imgElement = tempDiv.firstElementChild;
+    if (imgElement) {
+      artLogo.appendChild(imgElement);
+    }
+    
     if (artLabel) {
       const label = artLabels[id] || 'ATOM';
       artLabel.textContent = `[ ${label} ]`;
