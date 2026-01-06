@@ -1895,6 +1895,12 @@ button.tag {
    TYPEWRITER EFFECT - Text Animation
    ============================================ */
 
+[data-typewriter] {
+	display: inline-block;
+	white-space: nowrap;
+	flex: 0 0 auto;
+}
+
 .typewriter-text {
 	display: inline;
 	color: inherit;
