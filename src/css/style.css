@@ -1898,15 +1898,6 @@ button.tag {
 [data-typewriter] {
 	display: inline-block;
 	white-space: nowrap;
-	flex: 0 0 auto;
-}
-
-.typewriter-text {
-	display: inline;
-	color: inherit;
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
 }
 
 .typewriter-cursor {

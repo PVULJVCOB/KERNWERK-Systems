@@ -228,11 +228,14 @@ class TypewriterEffect {
         // Add next character from full text
         item.currentText += item.fullText[item.currentText.length];
         
-        // Escape HTML to prevent XSS
-        const text = this.escapeHtml(item.currentText);
+        // Clear element and add text content
+        item.element.textContent = item.currentText;
         
-        // Update display with cursor
-        item.element.innerHTML = `<span class="typewriter-text">${text}<span class="typewriter-cursor">${this.cursorChar}</span></span>`;
+        // Add cursor as separate element
+        const cursor = document.createElement('span');
+        cursor.className = 'typewriter-cursor';
+        cursor.textContent = this.cursorChar;
+        item.element.appendChild(cursor);
         
         // Schedule next character
         const timeoutId = setTimeout(
@@ -244,8 +247,7 @@ class TypewriterEffect {
       // === Typing complete ===
       else {
         // Display final text without cursor
-        const text = this.escapeHtml(item.fullText);
-        item.element.innerHTML = `<span class="typewriter-text">${text}</span>`;
+        item.element.textContent = item.fullText;
         
         // === Check if all elements in slide are done ===
         const allDone = slideItems.every(
