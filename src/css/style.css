@@ -1282,32 +1282,35 @@ button.tag {
 .help-topic {
 	display: grid;
 	grid-column: span 12;
-	grid-template-columns: subgrid;
-	grid-row-gap: 24px;
-	row-gap: 24px;
-	grid-template-rows: auto 1fr auto auto;
+	grid-template-columns: 1fr;
+	grid-auto-rows: auto 1fr auto auto;
+	gap: 24px;
+	height: 100%;
+	align-content: start;
 }
 
-.help-topic__header,
-.help-topic__link {
+.help-topic__header {
 	grid-column: 1/-1;
+	grid-row: 1;
 }
 
-.help-topic__examples {
-	grid-column: 7/-1;
-	padding-left: 24px;
-	padding-bottom: 12px;
-	border-bottom: 1px dotted var(--dottedBorderColor);
-	color: #161616;
-}
-
-.help-topic .help-topic__body {
-	grid-column: 1/7;
-	padding-right: 24px;
+.help-topic__body {
+	grid-column: 1/-1;
+	grid-row: 2;
 	font-size: clamp(16px, 1.8vw, 20px);
 	line-height: 120%;
 	letter-spacing: -0.01em;
 	font-weight: 300;
+	color: #161616;
+}
+
+.help-topic__examples {
+	grid-column: 1/-1;
+	grid-row: 3;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	color: #161616;
 }
 
 .help-topic__example {
@@ -1317,30 +1320,32 @@ button.tag {
 	border-bottom: 1px dotted var(--dottedBorderColor);
 	display: flex;
 	flex-direction: row;
-	justify-items: flex-start;
 	align-items: flex-start;
 	gap: 8px;
 }
 
+.help-topic__example:last-child {
+	border-bottom: none;
+}
+
 .help-topic__example-icon {
 	margin-top: 4px;
+	flex-shrink: 0;
 }
 
 .help-topic__example .square-icon {
 	background-color: #161616;
 }
 
-@media (max-width: 959px){
-	.help-topic,
-	.help-topic__examples,
-	.help-topic__header,
-	.help-topic__link {
-		grid-column: 1/-1;
-	}
+.help-topic__link {
+	grid-column: 1/-1;
+	grid-row: 4;
+	align-self: end;
+}
 
-	.help-topic__examples {
-		padding: 0;
-		border: 0;
+@media (max-width: 959px) {
+	.help-topic {
+		grid-column: 1/-1;
 	}
 }
 
@@ -1584,7 +1589,7 @@ button.tag {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 100dvh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1592,12 +1597,6 @@ button.tag {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
-}
-
-@media (max-width: 599px) {
-	.auth-modal {
-		height: 100dvh;
-	}
 }
 
 .auth-modal.active {
@@ -1611,7 +1610,7 @@ button.tag {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 100dvh;
 	background: rgba(0, 0, 0, 0);
 	-webkit-backdrop-filter: blur(10px) saturate(1.1);
 	backdrop-filter: blur(10px) saturate(1.1);
