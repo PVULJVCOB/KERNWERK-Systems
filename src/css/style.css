@@ -1594,6 +1594,12 @@ button.tag {
 	pointer-events: none;
 }
 
+@media (max-width: 599px) {
+	.auth-modal {
+		height: 100dvh;
+	}
+}
+
 .auth-modal.active {
 	opacity: 1;
 	visibility: visible;
