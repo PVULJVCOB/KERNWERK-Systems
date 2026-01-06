@@ -1281,73 +1281,59 @@ button.tag {
 
 .help-topic {
 	display: grid;
-	grid-column: span 12;
-	grid-template-columns: subgrid;
-	grid-row-gap: 16px;
-	row-gap: 16px;
-	grid-template-rows: 40px 200px 140px 56px;
-	height: 492px;
-}
-
-.help-topic__header,
-.help-topic__link {
-	grid-column: 1/-1;
+	grid-template-rows: 40px 100px 140px 48px;
+	grid-template-columns: 1fr;
+	gap: 16px;
+	width: 100%;
+	max-width: 100%;
 }
 
 .help-topic__header {
-	display: flex;
-	align-items: flex-end;
-	height: 40px;
+	text-align: left;
+	grid-row: 1;
+	overflow: hidden;
 }
 
 .help-topic__examples {
-	grid-column: 7/-1;
-	padding-left: 24px;
-	padding-bottom: 12px;
-	border-bottom: 1px dotted var(--dottedBorderColor);
-	color: #161616;
+	grid-row: 3;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	height: 140px;
-	min-height: 140px;
+	gap: 12px;
+	border-bottom: 1px dotted var(--dottedBorderColor);
+	color: #161616;
+	padding-bottom: 12px;
+	overflow: hidden;
 }
 
 .help-topic .help-topic__body {
-	grid-column: 1/7;
-	padding-right: 24px;
+	grid-row: 2;
 	font-size: clamp(16px, 1.8vw, 20px);
 	line-height: 120%;
 	letter-spacing: -0.01em;
 	font-weight: 300;
-	display: flex;
-	align-items: flex-start;
-	height: 200px;
-	max-width: 100%;
-	box-sizing: border-box;
+	text-align: left;
+	word-break: break-word;
 	overflow: hidden;
 }
 
 .help-topic__example {
-	padding: 12px 0;
-	margin-bottom: -1px;
-	color: #161616;
-	border-bottom: 1px dotted var(--dottedBorderColor);
+	padding: 0;
 	display: flex;
 	flex-direction: row;
-	justify-items: flex-start;
 	align-items: flex-start;
 	gap: 8px;
+	color: #161616;
+	border-bottom: 1px dotted var(--dottedBorderColor);
 }
 
 .help-topic__example span[data-typewriter] {
-	display: inline-block;
-	white-space: nowrap;
-	min-width: 18ch;
+	word-break: break-word;
+	flex: 1;
 }
 
 .help-topic__example-icon {
-	margin-top: 4px;
+	margin-top: 2px;
+	flex-shrink: 0;
 }
 
 .help-topic__example .square-icon {
@@ -1355,19 +1341,15 @@ button.tag {
 }
 
 .help-topic__link {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 56px;
-	min-height: 56px;
+	grid-row: 4;
+	align-self: center;
+	justify-self: center;
+	padding: 12px 24px;
 }
 
 @media (max-width: 959px){
-	.help-topic,
-	.help-topic__examples,
-	.help-topic__header,
-	.help-topic__link {
-		grid-column: 1/-1;
+	.help-topic {
+		width: 100%;
 	}
 
 	.help-topic__examples {
@@ -1419,12 +1401,12 @@ button.tag {
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
 	min-width: calc(100% - 48px);
-	padding-bottom: 24px;
-	display: grid;
-	grid-template-rows: 40px 200px 140px 56px;
-	row-gap: 16px;
-	height: 492px;
+	padding: 16px;
 	box-sizing: border-box;
+	display: grid;
+	grid-template-rows: 56px 80px 140px 48px;
+	grid-template-columns: 1fr;
+	gap: 16px;
 }
 
 @media (min-width: 600px) {
