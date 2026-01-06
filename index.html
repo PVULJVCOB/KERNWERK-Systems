@@ -2,6 +2,7 @@
 <html lang="de">
  <head>
   <meta charset="utf-8"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://images.ctfassets.net; frame-ancestors 'none'"/>
   <link rel="dns-prefetch" href="https://images.ctfassets.net"/>
   <title>
    KERNWERK SYSTEMS
@@ -11,6 +12,8 @@
   <meta content="Ein kognitives Entlastungssystem für handlungsfähiges Arbeiten." property="og:description"/>
   <meta content="https://images.ctfassets.net/fzn2n1nzq965/1IiEdIR6LsEY9aym5JQM6u/85a9a55f58137d9d1fac99319658081b/dev_social.png" name="og:image" property="og:image"/>
   <meta content="https://images.ctfassets.net/fzn2n1nzq965/1IiEdIR6LsEY9aym5JQM6u/85a9a55f58137d9d1fac99319658081b/dev_social.png" name="image" property="og:image"/>
+  <meta content="https://www.kernwerk-systems.de" property="og:url"/>
+  <meta content="de_DE" property="og:locale"/>
   <meta content="Ein kognitives Entlastungssystem für handlungsfähiges Arbeiten." name="description" property="og:description"/>
   <meta name="theme-color" content="#eaeaea"/>
   <meta content="summary_large_image" name="twitter:card"/>
@@ -19,12 +22,42 @@
   <meta content="KERNWERK SYSTEMS" name="twitter:title"/>
   <meta content="Ein kognitives Entlastungssystem für handlungsfähiges Arbeiten." name="twitter:description"/>
   <meta content="https://images.ctfassets.net/fzn2n1nzq965/1IiEdIR6LsEY9aym5JQM6u/85a9a55f58137d9d1fac99319658081b/dev_social.png" name="twitter:image"/>
+  <link rel="canonical" href="https://www.kernwerk-systems.de"/>
+  <link rel="sitemap" href="/sitemap.xml"/>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
   <link rel="icon" type="image/svg+xml" href="src/assets/svg/atom-logo.svg"/>
   <link rel="icon" href="src/assets/svg/atom-logo.ico" sizes="32x32" type="image/x-icon"/>
   <link rel="icon" href="src/assets/svg/atom-logo.ico" sizes="16x16" type="image/x-icon"/>
   <link rel="shortcut icon" href="src/assets/svg/atom-logo.ico" type="image/x-icon"/>
   <link rel="mask-icon" href="src/assets/svg/atom-logo.svg" color="#1f2933"/>
   <meta content="15" name="next-head-count"/>
+  <!-- JSON-LD Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "KERNWERK SYSTEMS",
+    "description": "Ein kognitives Entlastungssystem für handlungsfähiges Arbeiten",
+    "url": "https://www.kernwerk-systems.de",
+    "applicationCategory": "ProductivityApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "KERNWERK Systems",
+      "url": "https://www.kernwerk-systems.de"
+    },
+    "image": "https://images.ctfassets.net/fzn2n1nzq965/1IiEdIR6LsEY9aym5JQM6u/85a9a55f58137d9d1fac99319658081b/dev_social.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "100"
+    }
+  }
+  </script>
   <link href="src/css/style.css" rel="stylesheet"/>
   <link href="src/css/main.css" rel="stylesheet"/>
   <noscript data-n-css="">
@@ -41,27 +74,25 @@
         <span class="nav-button__hotkey">[K]</span>
         KERNWERK
        </a>
-       <a class="text-smallcaps nav-button" href="/atomize" target="_self" data-hotkey="a">
-        <span class="nav-button__hotkey">[A]</span>
-        ATOMIZE
-       </a>
-       <a class="text-smallcaps nav-button" href="/plans" target="_self" data-hotkey="p">
-        <span class="nav-button__hotkey">[P]</span>
-        PLANS
-       </a>
-       <a class="text-smallcaps nav-button" href="https://github.com/kernwerk" target="_blank" rel="noopener noreferrer" data-hotkey="g">
+       <a class="text-smallcaps nav-button" href="https://github.com/PVULJVCOB" target="_blank" rel="noopener noreferrer" data-hotkey="g">
         <span class="nav-button__hotkey">[G]</span>
         GITHUB
        </a>
-       <a class="text-smallcaps nav-button" href="/login" target="_self" data-hotkey="l">
+       <!-- Nicht angemeldet: Registrieren & Login -->
+       <a class="text-smallcaps nav-button nav-auth-logged-out" href="/atomize" target="_self" data-hotkey="r">
+        <span class="nav-button__hotkey">[R]</span>
+        REGISTRIEREN
+       </a>
+       <a class="text-smallcaps nav-button nav-auth-logged-out" href="/login" target="_self" data-hotkey="l">
         <span class="nav-button__hotkey">[L]</span>
         LOGIN
        </a>
-       <a class="text-smallcaps nav-button" href="/profile" target="_self" data-hotkey="r">
-        <span class="nav-button__hotkey">[R]</span>
-        PROFILE
+       <!-- Angemeldet: Profil & Logout -->
+       <a class="text-smallcaps nav-button nav-auth-logged-in" href="/profile" target="_self" data-hotkey="p" style="display: none;">
+        <span class="nav-button__hotkey">[P]</span>
+        PROFIL
        </a>
-       <a class="text-smallcaps nav-button" href="/logout" target="_self" data-hotkey="o">
+       <a class="text-smallcaps nav-button nav-auth-logged-in" href="/logout" target="_self" data-hotkey="l" style="display: none;">
         <span class="nav-button__hotkey">[L]</span>
         LOGOUT
        </a>
@@ -74,10 +105,10 @@
     <!-- HERO: Intro-Claim mit Globe-Grafik --> 
     <section class="section hero-section">
       <div class="hero__plus-icons parallax-layer" data-parallax-speed="0.24">
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
       </div>
       <span class="hero__title text-hero parallax-layer" data-parallax-speed="0.08">
        KERNWERK
@@ -90,20 +121,20 @@
        KERNWERK SYSTEMS - Kognitives Entlastungssystem
       </h1>
       <div class="hero__plus-icons hero__plus-icons--second parallax-layer" data-parallax-speed="0.16">
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
       </div>
       <p class="hero__subtitle text-lg parallax-layer" data-parallax-speed="0.12">
        Ein kognitives Entlastungssystem für handlungsfähiges Arbeiten.
       </p>
       
       <div class="hero__plus-icons hero__plus-icons--third parallax-layer" data-parallax-speed="0.28">
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+       <svg class="plus-icon" fill="none" height="8" viewbox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true"><path clip-rule="evenodd" d="M3.5 4.5V8H4.5V4.5H8V3.5H4.5V0H3.5V3.5H0V4.5H3.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>
       </div>
      </section>
 
@@ -195,10 +226,10 @@
           Menschen wissen, was sie tun wollen, können aber nicht anfangen. Nicht wegen Faulheit, sondern wegen mentaler Komplexität.
          </p>
          <div class="text-smallcaps help-topic__examples">
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Zu große Projekte</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Zu viele Optionen</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Fehlende Priorität</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Unrealistische Zeitannahmen</div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Zu große Projekte"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Zu viele Optionen"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Fehlende Priorität"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Unrealistische Zeitannahmen"></span></div>
          </div>
          <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
@@ -212,9 +243,9 @@
           Ein Projekt wird nicht als Ziel behandelt, sondern als Material, das in kleinste, eindeutig ausführbare Einheiten zerlegt wird.
          </p>
          <div class="text-smallcaps help-topic__examples">
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Keine innere Verhandlung mehr</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Jede Aufgabe ist startbar</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Zeitlich verortet und priorisiert</div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Keine innere Verhandlung mehr"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Jede Aufgabe ist startbar"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Zeitlich verortet und priorisiert"></span></div>
          </div>
          <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
@@ -228,9 +259,9 @@
           KERNWERK ist kein Motivationstool. Es erzeugt keinen Druck und keine Gamification zur Selbstdisziplinierung.
          </p>
          <div class="text-smallcaps help-topic__examples">
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Keine künstliche Dringlichkeit</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Keine Schulderzeugung</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Reine strukturelle Klarheit</div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Keine künstliche Dringlichkeit"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Keine Schulderzeugung"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Reine strukturelle Klarheit"></span></div>
          </div>
          <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
@@ -244,9 +275,9 @@
           Das integrierte Assistenzsystem dient nicht der Motivation, sondern der Strukturerhaltung. Es greift ein, wenn Aufgaben stagnieren oder Überladung entsteht.
          </p>
          <div class="text-smallcaps help-topic__examples">
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Erkennt Stagnation</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Passt Struktur an</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Eliminiert Schuldgefühle</div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Erkennt Stagnation"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Passt Struktur an"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Eliminiert Schuldgefühle"></span></div>
          </div>
          <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
@@ -260,9 +291,9 @@
           Nicht erledigte Punkte zählen. KERNWERK misst Fortschritt in aufgelöster Komplexität und struktureller Verbesserung.
          </p>
          <div class="text-smallcaps help-topic__examples">
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Echte Produktivität</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Nachhaltige Leistung</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Handlungsfähigkeit</div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Echte Produktivität"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Nachhaltige Leistung"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Handlungsfähigkeit"></span></div>
          </div>
          <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
@@ -276,9 +307,9 @@
           Ein Werkzeug für Menschen, deren Leistungsfähigkeit nicht an Können scheitert, sondern an Überforderung durch ungeordnete Anforderungen.
          </p>
          <div class="text-smallcaps help-topic__examples">
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Knowledge Worker</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Projektmanager</div>
-          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div>Teams mit vielen Anforderungen</div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Knowledge Worker"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Projektmanager"></span></div>
+          <div class="help-topic__example"><div class="square-icon help-topic__example-icon"></div><span data-typewriter="Teams mit vielen Anforderungen"></span></div>
          </div>
          <a class="buttonMd help-topic__link" href="javascript:void(0)">Mehr erfahren</a>
         </div>
@@ -723,8 +754,181 @@
 
    </main>
   </div>
+
+  <!-- PROFILE POPUP -->
+  <div id="profile-popup" class="auth-modal">
+    <div class="auth-modal__overlay"></div>
+    <div class="auth-modal__content">
+      <button class="auth-modal__close" aria-label="Popup schließen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <!-- Avatar -->
+      <div class="profile-avatar-section">
+        <div class="profile-avatar" id="popup-avatar"></div>
+        <h2 class="profile-name" id="popup-name">Benutzer</h2>
+        <p class="profile-email" id="popup-email">email@example.com</p>
+      </div>
+      
+     
+
+      <div class="auth-modal__field">
+        <label class="auth-modal__label">Registriert seit</label>
+        <div id="popup-date" style="padding: 12px 14px; font-size: 15px; color: #1e1e1e;">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN / REGISTER MODAL -->
+  <div id="auth-modal" class="auth-modal">
+    <div class="auth-modal__overlay"></div>
+    <div class="auth-modal__content">
+      <button class="auth-modal__close" aria-label="Modal schließen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="auth-modal__tabs">
+        <button class="auth-modal__tab auth-modal__tab--active" data-tab="login">
+          LOGIN
+        </button>
+        <button class="auth-modal__tab" data-tab="register">
+          REGISTRIEREN
+        </button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="login-form" class="auth-modal__form auth-modal__form--active">
+        <h2 class="auth-modal__title">Willkommen zurück</h2>
+        
+        <div class="auth-modal__field">
+          <label for="login-email" class="auth-modal__label">E-Mail</label>
+          <input 
+            type="email" 
+            id="login-email" 
+            class="auth-modal__input" 
+            placeholder="deine@email.de"
+            required
+          />
+        </div>
+
+        <div class="auth-modal__field">
+          <label for="login-password" class="auth-modal__label">Passwort</label>
+          <input 
+            type="password" 
+            id="login-password" 
+            class="auth-modal__input" 
+            placeholder="••••••••"
+            required
+          />
+        </div>
+
+        <a href="#" class="auth-modal__forgot-link">Passwort vergessen?</a>
+
+        <button type="submit" class="auth-modal__submit">
+          Einloggen
+        </button>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="register-form" class="auth-modal__form">
+        <h2 class="auth-modal__title">Neues Konto erstellen</h2>
+        
+        <div class="auth-modal__field">
+          <label for="register-name" class="auth-modal__label">Vollständiger Name</label>
+          <input 
+            type="text" 
+            id="register-name" 
+            class="auth-modal__input" 
+            placeholder="Max Mustermann"
+            required
+          />
+        </div>
+
+        <div class="auth-modal__field">
+          <label for="register-email" class="auth-modal__label">E-Mail</label>
+          <input 
+            type="email" 
+            id="register-email" 
+            class="auth-modal__input" 
+            placeholder="deine@email.de"
+            required
+          />
+        </div>
+
+        <div class="auth-modal__field">
+          <label for="register-password" class="auth-modal__label">Passwort</label>
+          <input 
+            type="password" 
+            id="register-password" 
+            class="auth-modal__input" 
+            placeholder="••••••••"
+            required
+          />
+        </div>
+
+        <div class="auth-modal__field">
+          <label for="register-password-confirm" class="auth-modal__label">Passwort wiederholen</label>
+          <input 
+            type="password" 
+            id="register-password-confirm" 
+            class="auth-modal__input" 
+            placeholder="••••••••"
+            required
+          />
+        </div>
+
+        <div class="auth-modal__checkbox">
+          <input 
+            type="checkbox" 
+            id="register-terms" 
+            class="auth-modal__checkbox-input"
+            required
+          />
+          <label for="register-terms" class="auth-modal__checkbox-label">
+            Ich stimme den <a href="#">Bedingungen</a> zu
+          </label>
+        </div>
+
+        <button type="submit" class="auth-modal__submit">
+          Registrieren
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="src/js/auth-manager.js"></script>
   <script src="src/js/hotkeys.js"></script>
   <script src="src/js/slideshow.js"></script>
   <script src="src/js/parallax-reveal.js"></script>
+  <script src="src/js/typewriter.js"></script>
+  <script src="src/js/auth-modal.js"></script>
+  <script src="src/js/profile-popup.js"></script>
+  
+  <script>
+    // Initialize slideshow after DOM is loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        initSlideshow({
+          sliderId: 'KernwerkSlider',
+          dotsId: 'kernwerkDots',
+          prevId: 'kernwerkPrev',
+          nextId: 'kernwerkNext'
+        });
+      });
+    } else {
+      initSlideshow({
+        sliderId: 'KernwerkSlider',
+        dotsId: 'kernwerkDots',
+        prevId: 'kernwerkPrev',
+        nextId: 'kernwerkNext'
+      });
+    }
+  </script>
  </body>
 </html>

@@ -1420,10 +1420,8 @@ button.tag {
 }
 
 .slideshow__dot {
-		display: inline-block;
 		width: 8px;
 		height: 8px;
-		padding: 0;
 		border-radius: 50%;
 		background: var(--borderColor, rgba(0, 0, 0, 0.2));
 		cursor: pointer;
