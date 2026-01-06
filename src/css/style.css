@@ -323,7 +323,7 @@
 }
 
 /* Gestaffeltes Einblenden der 6 System-Baustein-Karten */
-.router-section__list .objective {
+.system-section__list .objective {
 	opacity: 0;
 	transform: translateY(40px);
 	transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -331,17 +331,17 @@
 	transition-delay: 0ms;
 }
 
-.router-section__list .objective.is-visible {
+.system-section__list .objective.is-visible {
 	opacity: 1;
 	transform: translateY(0);
 }
 
-.router-section__list .objective:nth-of-type(1) { --objective-index: 0; }
-.router-section__list .objective:nth-of-type(2) { --objective-index: 1; }
-.router-section__list .objective:nth-of-type(3) { --objective-index: 2; }
-.router-section__list .objective:nth-of-type(4) { --objective-index: 3; }
-.router-section__list .objective:nth-of-type(5) { --objective-index: 4; }
-.router-section__list .objective:nth-of-type(6) { --objective-index: 5; }
+.system-section__list .objective:nth-of-type(1) { --objective-index: 0; }
+.system-section__list .objective:nth-of-type(2) { --objective-index: 1; }
+.system-section__list .objective:nth-of-type(3) { --objective-index: 2; }
+.system-section__list .objective:nth-of-type(4) { --objective-index: 3; }
+.system-section__list .objective:nth-of-type(5) { --objective-index: 4; }
+.system-section__list .objective:nth-of-type(6) { --objective-index: 5; }
 
 @media (prefers-reduced-motion: reduce) {
 	.parallax-layer {
@@ -1100,10 +1100,10 @@ button.tag {
 }
 
 /* ============================================
-   ROUTER SECTION (System Overview)
+   system SECTION (System Overview)
    ============================================ */
 
-.router-section {
+.system-section {
 	row-gap: 36px;
 	margin-top: 100px;
 
@@ -1127,7 +1127,7 @@ button.tag {
 	}
 }
 
-.router-section__toc {
+.system-section__toc {
 	position: -webkit-sticky;
 	position: sticky;
 	top: var(--stickyOffset);
@@ -1140,17 +1140,17 @@ button.tag {
 
 /* Firefox Fallback */
 @-moz-document url-prefix(){
-	.router-section__toc {
+	.system-section__toc {
 		top: 0;
 		position: relative;
 	}
 }
 
-.router-section__art {
+.system-section__art {
 	grid-column: 1/-1;
 }
 
-.router-section__list {
+.system-section__list {
 	display: grid;
 	grid-column: 1/-1;
 	grid-template-columns: subgrid;
@@ -1158,21 +1158,21 @@ button.tag {
 	row-gap: 24px;
 }
 
-.router-section__list-header,
-.router-section__toc-header {
+.system-section__list-header,
+.system-section__toc-header {
 	grid-column: 1/-1;
 }
 
 @media (min-width: 960px){
-	.router-section {
+	.system-section {
 		row-gap: 56px;
 	}
 
-	.router-section__toc {
+	.system-section__toc {
 		display: grid;
 	}
 
-	.router-section__list {
+	.system-section__list {
 		grid-column: 8/25;
 	}
 }
@@ -1264,9 +1264,10 @@ button.tag {
 	}
 }
 
+
 /* ============================================
-	KERNWERK SECTION (Slideshow)
-	============================================ */
+   SLIDESHOW
+   ============================================ */
 
 .kernwerk-section {
 	row-gap: 36px;
@@ -1279,95 +1280,13 @@ button.tag {
 	}
 }
 
-.help-topic {
-	display: grid;
-	grid-template-rows: 40px 100px 140px 48px;
-	grid-template-columns: 1fr;
-	gap: 16px;
-	width: 100%;
-	max-width: 100%;
-}
-
-.help-topic__header {
-	text-align: left;
-	grid-row: 1;
-	overflow: hidden;
-}
-
-.help-topic__examples {
-	grid-row: 3;
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	border-bottom: 1px dotted var(--dottedBorderColor);
-	color: #161616;
-	padding-bottom: 12px;
-	overflow: hidden;
-}
-
-.help-topic .help-topic__body {
-	grid-row: 2;
-	font-size: clamp(16px, 1.8vw, 20px);
-	line-height: 120%;
-	letter-spacing: -0.01em;
-	font-weight: 300;
-	text-align: left;
-	word-break: break-word;
-	overflow: hidden;
-}
-
-.help-topic__example {
-	padding: 0;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	gap: 8px;
-	color: #161616;
-	border-bottom: 1px dotted var(--dottedBorderColor);
-}
-
-.help-topic__example span[data-typewriter] {
-	word-break: break-word;
-	flex: 1;
-}
-
-.help-topic__example-icon {
-	margin-top: 2px;
-	flex-shrink: 0;
-}
-
-.help-topic__example .square-icon {
-	background-color: #161616;
-}
-
-.help-topic__link {
-	grid-row: 4;
-	align-self: center;
-	justify-self: center;
-	padding: 12px 24px;
-}
-
-@media (max-width: 959px){
-	.help-topic {
-		width: 100%;
-	}
-
-	.help-topic__examples {
-		padding: 0;
-		border: 0;
-	}
-}
-
-/* ============================================
-   SLIDESHOW
-   ============================================ */
-
 .slideshow {
 	grid-column: 1/-1;
 	position: relative;
 	width: 100%;
 	overflow: hidden;
 	margin-top: 2px;
+	will-change: transform;
 }
 
 .slideshow__slider {
@@ -1379,7 +1298,6 @@ button.tag {
 	scroll-snap-type: x mandatory;
 	padding: 12px 24px 24px;
 	-webkit-overflow-scrolling: touch;
-	align-items: stretch;
 
 	@media (max-width: 599px) {
 		gap: 16px;
@@ -1404,7 +1322,7 @@ button.tag {
 	padding: 16px;
 	box-sizing: border-box;
 	display: grid;
-	grid-template-rows: 56px 80px 140px 48px;
+	grid-template-rows: 20px 110px 110px 40px;
 	grid-template-columns: 1fr;
 	gap: 16px;
 }

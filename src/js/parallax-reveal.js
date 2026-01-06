@@ -58,8 +58,8 @@
       (el) => !el.classList.contains('hero-section')
     );
     
-    // Objectives in the router section (for art symbol swapping)
-    const objectiveItems = Array.from(document.querySelectorAll('.router-section__list .objective'));
+    // Objectives in the system section (for art symbol swapping)
+    const objectiveItems = Array.from(document.querySelectorAll('.system-section__list .objective'));
     
     // All items that should reveal on scroll
     const revealItems = [...sectionItems, ...objectiveItems];
@@ -67,7 +67,7 @@
     // === Art Symbol Swapper Setup ===
     // References to elements involved in dynamic symbol swapping
     const artLogo = document.querySelector('.art-window__logo');
-    const artWindow = document.querySelector('.router-section .art-window');
+    const artWindow = document.querySelector('.system-section .art-window');
     const artLabel = document.querySelector('.art-window__figure-label');
     
     // State tracking for symbol swapping
