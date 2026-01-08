@@ -360,38 +360,38 @@ img {
 	color: var(--headingTextColor, --fontColor);
 	font-family: sohne-var, Helvetica Neue, Arial, sans-serif;
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 200;
 }
 
 /* ─────────────────────────────────────────
    MEDIUM - Sektions-Überschriften (20px → 28px)
    ───────────────────────────────────────── */
 .text-md {
-	font-size: calc(20px + ((27 - 20) * (100vw - 390px) / (760 - 390)));
+	font-size: calc(16px + ((22 - 16) * (100vw - 390px) / (760 - 390)));
 	line-height: 100%;
 	letter-spacing: -0.04em;
 }
 
 @media (min-width: 760px) {
 	.text-md {
-		font-size: calc(22px + ((27 - 22) * (100vw - 760px) / (960 - 760)));
+		font-size: calc(18px + ((22 - 18) * (100vw - 760px) / (960 - 760)));
 	}
 }
 
 @media (min-width: 960px) {
 	.text-md {
-		font-size: calc(22px + ((28 - 22) * (100vw - 960px) / (1728 - 960)));
+		font-size: calc(18px + ((22 - 18) * (100vw - 960px) / (1728 - 960)));
 	}
 }
 
 @media (min-width: 1728px) {
 	.text-md {
-		font-size: 28px;
+		font-size: 22px;
 	}
 }
 
 .text-md b {
-	font-weight: 500;                           /* Bold Variante */
+	font-weight: 300;                           /* Bold Variante */
 }
 
 /* ─────────────────────────────────────────
@@ -414,12 +414,12 @@ img {
 }
 
 /* ─────────────────────────────────────────
-   SMALLCAPS - Labels & Technischer Text (12px fixed)
+   SMALLCAPS - Labels & Technischer Text (responsive 10px → 14px)
    ───────────────────────────────────────── */
 .text-smallcaps {
 	color: var(--squareTextColor, --fontColor);
 	font-family: sohne-mono;                    /* Monospace Font */
-	font-size: 12px;
+	font-size: clamp(10px, 2vw, 14px);
 	font-style: normal;
 	font-weight: 300;
 	letter-spacing: -0.012em;
